@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+  
+    <PreferenceCategory 
+        android:title="@string/pref_dir_odts"  
+        android:key="pref_dir_odts_title">
+        <de.floresse.mymovies.StringPreference 
+            android:layout="@layout/pref_text_layout"
+            android:key="pref_key_dir_odts_movies"
+            android:title="@string/pref_title_dir_odts_movies"
+            android:defaultValue="@string/pref_default_dir_odts" 
+            android:icon="@drawable/movie"
+            />
+        <de.floresse.mymovies.StringPreference 
+            android:layout="@layout/pref_text_layout"
+            android:key="pref_key_dir_odts_books"
+            android:title="@string/pref_title_dir_odts_books"
+            android:defaultValue="@string/pref_default_dir_odts"
+            android:icon="@drawable/book_green"
+             
+            />
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="@string/pref_db"  
+        android:key="pref_db_title">
+        <CheckBoxPreference 
+            android:key="pref_isDBSearch"
+			android:icon="@drawable/database_32"
+            android:title="@string/pref_title_isDBSearch"
+            android:summary="@string/pref_summary_isDBSearch"
+            android:defaultValue="false" 
+            />
+        <de.floresse.mymovies.StringPreference 
+            android:layout="@layout/pref_text_layout"
+            android:key="pref_key_db"
+            android:title="@string/pref_title_db"
+            android:defaultValue="@string/pref_db_default" 
+            android:icon="@drawable/refresh"
+            />
+        <!--    android:widgetLayout="@layout/pref_ic_db"   --> 
+        </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="@string/pref_layout_title"
+        android:key="pref_key_layout_title">
+        <CheckBoxPreference
+            android:key="pref_isFullScreen"
+			android:icon="@drawable/fullscreenp"
+            android:title="@string/pref_title_isFullScreen"
+            android:summary="@string/pref_summary_isFullScreen"
+            android:defaultValue="false" 
+            />
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="@string/pref_download_title"
+        android:key="pref_key_download_title">
+        <EditTextPreference
+            android:key="pref_downloadServer"
+			android:icon="@drawable/downloadserver32"
+            android:title="@string/pref_title_downloadServer"
+            android:defaultValue="http://192.168.178.22:80/" 
+            />
+        <CheckBoxPreference
+            android:key="pref_isDownloadManager"
+			android:icon="@drawable/downloadmanager24"
+            android:title="@string/pref_title_isDownloadManager"
+            android:defaultValue="true" 
+            />
+        </PreferenceCategory>
+    
+</PreferenceScreen>

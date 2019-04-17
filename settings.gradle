@@ -1,0 +1,5 @@
+include ':app'
+/*
+include ':FileChooser'
+project(':FileChooser').projectDir = new File(settingsDir, '../FileChooser')
+*/

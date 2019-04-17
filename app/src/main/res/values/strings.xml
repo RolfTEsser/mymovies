@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyMovies</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_fullscreen">Fullscreen</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_makesesus">Suchtabellen erstellen</string>
+    <string name="action_download">Download</string>
+    <string name="dbloader_activity">DBLoader</string>
+    <string name="downloader_activity">DownLoader</string>
+    
+    <string name="chooser_app_name">File Chooser</string>
+    <string name="directory">Directory</string>
+    <string name="cant_read_folder">folder can\'t be read!</string>
+    <string name="nnew">Abbrechen</string>
+    <string name="select">Select</string>
+    <string name="file_name">File name:</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Save</string>
+    <string name="no_data"></string>
+    <color name="gray">#ffff0000</color>
+    <string name="err">Error</string>
+ 
+    <string name="pref_dir_odts">Location ODT- Dateien</string>
+    <string name="pref_dir_odts_title">DIRODTSTITLE</string>
+    <string name="pref_title_dir_odts_movies">Filme</string>
+    <string name="pref_key_dir_odts">DIRODTSMOVIES</string>
+    <string name="pref_title_dir_odts_books">Bücher</string>
+    <string name="pref_key_dir_odts_books">DIRODTSBOOKS</string>
+    <string name="pref_default_dir_odts">/</string>
+    <string name="pref_layout_title">Layout</string>
+    <string name="pref_key_layout_title">LAYOUTTITLE</string>
+    <string name="pref_db">Search Enhancement</string>
+    <string name="pref_dir_db_title">DATABASE</string>
+    <string name="pref_title_db">Start Load/Refresh DB</string>
+    <string name="pref_key_db">DBREFRESH</string>
+    <string name="pref_db_default">letzter Refresh : </string>
+    <string name="pref_title_isFullScreen">Full Screen</string>
+    <string name="pref_key_isFullScreen">ISFULLSCREEN</string>
+    <string name="pref_summary_isFullScreen"></string>
+    <string name="pref_title_isDBSearch">Suche über Datenbanken</string>
+    <string name="pref_key_isDBSearch">ISDBSEARCH</string>
+    <string name="pref_summary_isDBSearch"></string>
+    <string name="pref_download_title">Download</string>
+    <string name="pref_key_download_title">DOWNLOADTITLE</string>
+    <string name="pref_title_isDownloadManager">Download Manager</string>
+    <string name="pref_key_isDownloadManager">ISDOWNLOADMANAGER</string>
+    <string name="pref_title_downloadServer">Http Download Server</string>
+    
+    <string name="search_label">MyMovies</string>
+    <string name="settings_description">Text in MyMovies</string>
+    
+</resources>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_previous" 
+        android:title="@string/action_previous"
+        android:icon="@drawable/navigation_back"
+        android:showAsAction="always" />
+    <item android:id="@+id/action_next"
+        android:title="@string/action_next"
+        android:icon="@drawable/navigation_forward"
+        android:showAsAction="always" />
+    <item android:id="@+id/action_fullscreen" 
+        android:title="@string/action_fullscreen"
+        android:icon="@drawable/full_screen"
+        android:showAsAction="always" />
+</menu>

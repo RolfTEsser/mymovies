@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ald_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" > 
+
+    <TextView
+        android:id="@+id/ald_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingBottom="15sp"
+        android:paddingLeft="20sp"
+        android:paddingTop="15sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"  
+        android:text="Please Confirm" />
+	<View
+    	android:layout_width="fill_parent"
+    	android:layout_height="1dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+    	android:background="@android:color/darker_gray"/> 
+    <TextView
+        android:id="@+id/ald_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="20sp"
+        android:paddingTop="10sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        /> 
+    
+    <LinearLayout
+        android:id="@+id/ald_two_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       	android:layout_marginLeft="5sp"
+       	android:layout_marginRight="5sp"
+		android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ald_button_cancel"
+            android:layout_weight="0.50"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5sp"
+        	android:layout_marginRight="5sp"
+        	android:layout_gravity="center"
+      		android:background="@drawable/btn_rounded"
+        	android:paddingBottom="20sp"
+        	android:paddingTop="20sp" 
+        	/>
+
+        <Button
+            android:id="@+id/ald_button_okay"
+            android:layout_weight="0.50"
+    	    android:layout_width="wrap_content"
+        	android:layout_marginLeft="5sp"
+        	android:layout_marginRight="5sp"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+      		android:background="@drawable/btn_rounded"
+        	android:paddingBottom="20sp"
+        	android:paddingTop="20sp"
+        	/>
+
+    </LinearLayout>
+
+</LinearLayout>
