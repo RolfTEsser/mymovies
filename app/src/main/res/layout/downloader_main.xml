@@ -1,87 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/relativeLayout01"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-        <LinearLayout android:id="@+id/dlLayoutList"
-                android:orientation="vertical" 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" 
-                android:layout_alignParentBottom="true">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-                <LinearLayout android:id="@+id/dlLayoutSelect"
-                        android:orientation="vertical" 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true" 
-                        android:paddingTop="5dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp" 
-                        android:paddingBottom="5dp">
-                        
-	                <LinearLayout android:orientation="horizontal"
-                                android:layout_width="fill_parent" 
-                                android:layout_height="wrap_content" 
-						        android:weightSum="1.0" >
-                                <TextView android:id="@+id/dlDownloadFiles" 
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content" 
-							       	android:layout_weight="0.5"
-                                    android:text="Start Download" 
-    								android:layout_gravity="center|center_horizontal"
-   									android:gravity="center|center_horizontal"
-                                    android:clickable="true" >"
-                                </TextView>
-                                <TextView android:id="@+id/dlViewDownloads" 
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content" 
-							       	android:layout_weight="0.5"
-                                    android:text="Show Downloads"
-    								android:layout_gravity="center|center_horizontal"
-   									android:gravity="center|center_horizontal"
-                                    android:clickable="true" >"
-                                </TextView>
-                    </LinearLayout>
-           
-                </LinearLayout>
+    <include layout="@layout/toolbar"/>
 
-        </LinearLayout>
+    <LinearLayout android:id="@+id/dlLayoutSelect"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:weightSum="1.0" >
+        <TextView android:id="@+id/dlDownloadFiles"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Start Download"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:clickable="true" >"
+        </TextView>
+        <TextView android:id="@+id/dlViewDownloads"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="View Downloads"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:clickable="true" >"
+        </TextView>
+    </LinearLayout>
 
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/dlLayoutSelect">
+        <TextView android:id="@+id/dlpath"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="8sp"
+            android:layout_marginBottom="8sp" />
+        <ListView android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/no_data" />
         <LinearLayout android:orientation="vertical"
-                android:layout_width="fill_parent" 
-                android:layout_height="fill_parent"
-                android:layout_above="@+id/dlLayoutList">
-                <TextView android:id="@+id/dlpath" 
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-			        android:textAppearance="?android:attr/textAppearanceMedium" 
-                    android:layout_marginLeft="5sp" 
-                    android:layout_marginBottom="8sp" />
-                <ListView android:id="@android:id/list" 
-                    android:layout_width="fill_parent"
-                        android:layout_height="fill_parent" />
-                <TextView android:id="@android:id/empty"
-                        android:layout_width="fill_parent" 
-                        android:layout_height="wrap_content"
-    	                android:layout_marginLeft="10sp" 
-	                    android:text="@string/no_data" />
-        		<LinearLayout android:orientation="vertical"
-                	android:layout_width="fill_parent" 
-                	android:layout_height="fill_parent" 
-   					android:layout_gravity="center|center_horizontal"
-   					android:gravity="center|center_horizontal"
-                	>
-                	<ProgressBar
-    					android:layout_height="wrap_content"
-    					android:layout_width="wrap_content"
-    					android:layout_gravity="center|center_horizontal"
-	   					android:gravity="center|center_horizontal"
-    					android:id="@+id/dlActivityIndicator"
-    					android:indeterminateOnly="true"
-     					/>
-    					<!-- android:keepScreenOn="true"  -->
-                	</LinearLayout>	
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center|center_horizontal"
+            android:gravity="center|center_horizontal"
+            >
+            <ProgressBar
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:gravity="center|center_horizontal"
+                android:id="@+id/dlActivityIndicator"
+                android:indeterminateOnly="true"
+                />
+            <!-- android:keepScreenOn="true"  -->
         </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
-
+    <!--
+    <ListView android:id="@android:id/list"
+    -->

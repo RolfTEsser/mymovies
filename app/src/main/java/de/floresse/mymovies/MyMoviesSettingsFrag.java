@@ -58,10 +58,11 @@ public class MyMoviesSettingsFrag extends PreferenceFragment
                     @Override
                     public void onStringPreferenceClicked() {
                         //Log.i("MyMovies", "Settings - onStringPreferenceClicked ");
-                        Intent filechooser = new Intent(getActivity().getApplicationContext(), FileChooser.class);
-                        //Intent filechooser = new Intent(getActivity().getApplicationContext(), FilePickerActivity.class);
+                        Intent filechooser = new Intent(getActivity().getApplicationContext(), MyFileChooser.class);
                         filechooser.putExtra(FileChooser.START_PATH,
                                 prefDirMovies.onRestoreString());
+                        filechooser.putExtra(FileChooser.CANSELECTDIR, true);
+                        filechooser.putExtra(FileChooser.CANSELECTFILE, false);
 
                         startActivityForResult(filechooser, REQUEST_FILECHOOSER_MOVIES);
                     }
@@ -73,9 +74,11 @@ public class MyMoviesSettingsFrag extends PreferenceFragment
                     @Override
                     public void onStringPreferenceClicked() {
                         //Log.i("MyMovies", "Settings - onStringPreferenceClicked ");
-                        Intent filechooser = new Intent(getActivity().getApplicationContext(), FileChooser.class);
+                        Intent filechooser = new Intent(getActivity().getApplicationContext(), MyFileChooser.class);
                         filechooser.putExtra(FileChooser.START_PATH,
                                 prefDirBooks.onRestoreString());
+                        filechooser.putExtra(FileChooser.CANSELECTDIR, true);
+                        filechooser.putExtra(FileChooser.CANSELECTFILE, false);
 
                         startActivityForResult(filechooser, REQUEST_FILECHOOSER_BOOKS);
                     }

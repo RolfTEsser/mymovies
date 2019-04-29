@@ -60,7 +60,7 @@
             android:key="pref_downloadServer"
 			android:icon="@drawable/downloadserver32"
             android:title="@string/pref_title_downloadServer"
-            android:defaultValue="http://192.168.178.22:80/" 
+            android:defaultValue="http://192.168.178.29:80/"
             />
         <CheckBoxPreference
             android:key="pref_isDownloadManager"

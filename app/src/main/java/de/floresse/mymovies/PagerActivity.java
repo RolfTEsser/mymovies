@@ -11,7 +11,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Context;
@@ -25,6 +24,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,7 +39,7 @@ import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-public class PagerActivity extends FragmentActivity {
+public class PagerActivity extends AppCompatActivity {
 	
 	public static final String MOVIES = "Movies";
 	public static final String BOOKS = "Books";
@@ -185,25 +187,21 @@ public class PagerActivity extends FragmentActivity {
             case R.id.action_previous:
                 // Go to the previous step in the wizard. If there is no previous step,
                 // setCurrentItem will do nothing.
-                //mPager.setCurrentItem(mPager.getCurrentItem() - 1);
-                mPager.setCurrentItem(5);
+                mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+                //mPager.setCurrentItem(5);
                 return true;
             case R.id.action_next:
                 // Advance to the next step in the wizard. If there is no next step, setCurrentItem
                 // will do nothing.
-                //mPager.setCurrentItem(mPager.getCurrentItem() + 1);
-				mPager.setCurrentItem(5);
+                mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+				//mPager.setCurrentItem(5);
                 return true;
             case R.id.action_fullscreen:
             	bFullScreenNow = true;
-            	ActionBar ab = getActionBar();
+            	ActionBar ab = getSupportActionBar();
             	ab.hide();
                 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
-                return true;
-            case android.R.id.home:
-                // app icon in action bar clicked; go home
-            	finish();
                 return true;
 
         }
@@ -226,7 +224,7 @@ public class PagerActivity extends FragmentActivity {
 	public void onBackPressed() {
 		if (bFullScreenNow) {
         	bFullScreenNow = false;
-        	ActionBar ab = getActionBar();
+        	ActionBar ab = getSupportActionBar();
         	ab.show();
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		} else {
@@ -422,10 +420,13 @@ public class PagerActivity extends FragmentActivity {
 		
 		private void loadPager() {
         	setContentView(R.layout.pager);
-            ActionBar actionBar = getActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(true);
+			Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+			toolbar.setLogo(R.drawable.ic_launcher);
+			setSupportActionBar(toolbar);
+			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
             if (bFullScreen) {
-            	actionBar.hide();
+				getSupportActionBar().hide();
             	getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             						WindowManager.LayoutParams.FLAG_FULLSCREEN);
             }	

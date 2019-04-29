@@ -20,7 +20,6 @@
     <string name="cancel">Cancel</string>
     <string name="create">Save</string>
     <string name="no_data"></string>
-    <color name="gray">#ffff0000</color>
     <string name="err">Error</string>
  
     <string name="pref_dir_odts">Location ODT- Dateien</string>
